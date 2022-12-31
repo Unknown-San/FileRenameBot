@@ -6,15 +6,15 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 import os
 
 if bool(os.environ.get("WEBHOOK", False)):
-    from sample_config import Config
+    from config import Config
 
 import pyrogram
 
 
 
 if __name__ == "__main__" :
-    if not os.path.isdir(Config.DOWNLOAD_LOCATION):
-        os.makedirs(Config.DOWNLOAD_LOCATION)
+    if not os.path.isdir(config.DOWNLOAD_LOCATION):
+        os.makedirs(config.DOWNLOAD_LOCATION)
     plugins = dict(
         root="plugins"
     )
